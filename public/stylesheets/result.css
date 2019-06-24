@@ -1,0 +1,95 @@
+.result-content{
+    padding: 20px;
+}
+/*left part start*/
+.big-photo{
+    height: 360px;
+    width: 86%;
+    margin: 0 auto;
+    background: url("../images/Hepburn.jpg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.left-part p{
+    text-align: center;
+}
+.celebrity-name{
+    padding-top: 10px;
+    font-weight: 700;
+}
+.celebrity-intro{
+    font-size: 12px;
+}
+#another{
+    display: block;
+    width: 70%;
+    height: 20px;
+    margin: 0 auto;
+    padding: 16px 0;
+    background-color: #333;
+    border-radius: 6px;
+    border: 1px solid #333;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2px;
+    margin-bottom: 20px;
+}
+#another:hover{
+    font-size: 16px;
+}
+/*left part end*/
+
+/*right part start*/
+/*right part top*/
+#search input, #search select, #search button{
+    height: 30px;
+}
+#search button{
+    background-color: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+#filter li{
+    display: inline-block;
+    line-height: 30px;
+}
+#filter a:hover{
+    color: #000;
+}
+
+/*right part result list*/
+.result-list{
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+}
+.result-list:hover{
+    border: 1px solid lightgrey;
+}
+.result-list .photo{
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    background: url("../images/sample.jpg") no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.product-name{
+    text-align: center;
+    font-size: 14px;
+    font-family: Cambria;
+}
+.product-price{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+.save{
+    float: right;
+    font-size: 16px;
+    color: darkgray;
+}
+/*right part end*/

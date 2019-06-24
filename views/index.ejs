@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Retro Recommender -- Dress as a celebrity from the past">
+    <meta name="keywords" content="retro, recommender, celebrity, shopping, fashion">
+    <title>Retro Recommender</title>
+    <!-- import bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <!--import jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- import bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!--html5shiv and respond-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <script src="/javascripts/base.js"></script>
+</head>
+<body>
+
+<!--container start-->
+<section id="container">
+    <!--include header-->
+    <%- include("partials/header") %>
+
+    <!--retro search start-->
+    <section class="retro-search">
+        <div class="row">
+            <form action="/result" method="get">
+                <span class="col-sm-3"></span>
+                <input class="col-sm-3 col-xs-12" type="text" name="celebrity" placeholder="Name of a celebrity">
+                <select name="type" class="col-sm-2 col-xs-6">
+                    <option value="All">All</option>
+                    <option value="Dress">Dresses</option>
+                    <option value="Top">Tops</option>
+                    <option value="Trousers">Trousers</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+                <button class="col-sm-1 col-xs-6" type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </form>
+        </div>
+        <div class="row" id="text">
+            <span class="col-sm-3"></span>
+            <p class="col-sm-8">Try searching for celebrities from the past (the 20th century)</p>
+        </div>
+    </section>
+    <!--retro search end-->
+
+    <!--discover part start-->
+    <section class="retro-discover clearfix row">
+        <p>Discover: Celebrities From The Past</p>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Audrey Hepburn</p>
+            </a>
+            <p class="celebrity-intro">British Actress</p>
+        </div>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Ingrid Bergman</p>
+            </a>
+            <p class="celebrity-intro">Swedish Actress</p>
+        </div>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Cary Grant</p>
+            </a>
+            <p class="celebrity-intro">British Actor</p>
+        </div>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Marilyn Monroe</p>
+            </a>
+            <p class="celebrity-intro">American Actress</p>
+        </div>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Marlon Brando</p>
+            </a>
+            <p class="celebrity-intro">American Actor</p>
+        </div>
+        <div class="celebrity col-md-2 col-sm-4 col-xs-12">
+            <a href="">
+                <div class="img"></div>
+            </a>
+            <a href="">
+                <p class="celebrity-name">Greta Garbo</p>
+            </a>
+            <p class="celebrity-intro">Swedish-American Actress</p>
+        </div>
+        <div id="see-more">
+            <a href="/list"><p>See More Celebrities ></p></a>
+        </div>
+    </section>
+    <!--discover part end-->
+
+    <div class="push"></div>
+</section>
+<!--container end-->
+
+<!--include footer-->
+<%- include("partials/footer") %>
+
+</body>
+</html>

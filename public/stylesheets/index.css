@@ -1,0 +1,92 @@
+/*retro-search start*/
+.row{
+    margin:0 15px;
+}
+.retro-search{
+    height: 420px;
+    background: url("../images/bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-search input, .retro-search select, .retro-search button{
+    height: 50px;
+}
+.retro-search button{
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+.retro-search>div{
+    padding-top: 160px;
+}
+#text{
+    color: #fff;
+    padding-top: 16px;
+}
+/*retro-search end*/
+
+/*retro-discover start*/
+.retro-discover{
+    padding: 30px 16px;
+}
+.celebrity a:nth-child(2):hover{
+    color: #000;
+}
+.retro-discover>p{
+    font-family: Cambria;
+    font-size: 20px;
+    font-weight: 700;
+}
+.celebrity-name{
+    padding-top: 10px;
+    font-weight: 700;
+}
+.celebrity-intro{
+    font-size: 12px;
+}
+.retro-discover .img{
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+}
+.retro-discover .celebrity:nth-child(2) .img{
+    background: url("../images/Hepburn.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-discover .celebrity:nth-child(3) .img{
+    background: url("../images/Bergman.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-discover .celebrity:nth-child(4) .img{
+    background: url("../images/Grant.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-discover .celebrity:nth-child(5) .img{
+    background: url("../images/Monroe.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-discover .celebrity:nth-child(6) .img{
+    background: url("../images/Brando.jpeg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.retro-discover .celebrity:nth-child(7) .img{
+    background: url("../images/Garbo.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.celebrity{
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+}
+#see-more{
+    float: right;
+}
+#see-more:hover{
+    color: #000;
+}
+/*retro-discover end*/

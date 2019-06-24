@@ -1,0 +1,46 @@
+/*nav start*/
+.nav{
+    padding: 6px 20px 0;
+    background-color: #333;
+}
+.nav ul{
+    text-align: center;
+}
+.nav ul>li{
+    font-weight: 700;
+    font-size: 16px;
+    font-family: Cambria;
+}
+.nav ul li{
+    display: inline-block;
+    padding: 6px;
+    color: #fff;
+}
+.nav a:hover{
+    font-weight: 700;
+}
+/*nav end*/
+
+/*list start*/
+.list{
+    padding: 20px 30px;
+}
+.list ul li{
+    display: inline-block;
+    padding: 6px;
+}
+.list ul>li{
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Cambria;
+}
+.list a:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.border{
+    height: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+/*list end*/

@@ -1,0 +1,149 @@
+/*reset css start*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+body{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/*reset css end*/
+
+/*nav start*/
+.retro-top{
+    background-color: #f1f3f4;
+    height: 120px;
+}
+.title{
+    text-align: center;
+    padding-top: 6px;
+}
+.retro-top h3{
+    font-weight: 700;
+    font-size: 28px;
+    font-family: Cambria;
+}
+.retro-top h5{
+    font-size: 14px;
+}
+#reg-log li{
+    display: inline-block;
+    float: right;
+    padding: 2px;
+    margin: 0 12px;
+    color: #333;
+}
+#reg-log li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+#reg-log li:hover{
+    color: #000;
+}
+/*nav end*/
+
+/*log in and register part start*/
+.login-field, .reg-field{
+    display: block;
+    height: 40px;
+    padding: 20px;
+    width: 70%;
+    margin: 20px auto;
+}
+#signIn .modal-title, #register .modal-title{
+    padding-top: 30px;
+    text-align: center;
+    font-family: Cambria;
+    font-weight: 700;
+    font-size: 24px;
+}
+.login, .reg{
+    display: block;
+    margin: 0 auto;
+    height: 40px;
+    width: 70%;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.login:hover, .reg:hover{
+    font-size: 18px;
+}
+#login-reg, #reg-login{
+    text-align: center;
+    margin: 20px;
+    padding: 2px;
+    text-decoration: underline;
+    text-underline-position: under;
+    color: #888;
+    line-height: 20px;
+}
+#login-reg:hover, #reg-login:hover{
+    cursor: pointer;
+    color: #000;
+}
+#register .modal-header p{
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-family: Cambria;
+}
+/*log in and register part end*/
+
+/*container start*/
+#container{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+}
+/*container end*/
+
+/*footer start*/
+.push, #retro-footer{
+    height: 100px;
+    clear: both;
+}
+#retro-footer{
+    background-color: #f1f3f4;
+}
+#retro-footer li{
+    display: inline-block;
+    padding-right: 30px;
+}
+#retro-footer a{
+    padding: 3px;
+}
+#retro-footer a:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+#retro-footer ul{
+    margin-bottom: 0px;
+    padding-top: 25px;
+}
+#retro-footer div{
+    height: 50px;
+    padding: 0px 20px;
+}
+#retro-footer div span{
+    line-height: 50px;
+    font-size: 12px;
+}
+/*footer end*/

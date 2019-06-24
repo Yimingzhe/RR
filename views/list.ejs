@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="description" content="Retro Recommender -- Dress as a celebrity from the past">
+    <meta name="keywords" content="retro, recommender, celebrity, shopping, fashion">
+    <title>Retro Recommender</title>
+    <!-- import bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/list.css">
+    <!--import jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- import bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!--html5shiv and respond-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <script src="/javascripts/base.js"></script>
+</head>
+<body>
+
+<!--container start-->
+<div id="container">
+    <!--include header-->
+    <%- include("partials/header") %>
+
+    <!--nav start-->
+    <div class="nav">
+        <ul>
+            <li>Viewing: </li>
+            <% for(var i=0; i<26; i++){ %>
+            <% var letter = String.fromCharCode(65+i); %>
+            <% var pointer = "#" + i; %>
+            <a href=<%= pointer %>><li><%= letter %></li></a>
+            <% } %>
+        </ul>
+    </div>
+    <!--nav end-->
+
+    <!--list start-->
+    <div class="list">
+        <% for(var i=0; i<26; i++){ %>
+        <% var letter = String.fromCharCode(65+i) %>
+        <ul>
+            <li id=<%= i %>> <%= letter %></li>
+            <% for(var j=0; j<10; j++){ %>
+            <a href=""><li>Audrey Hepburn</li></a>
+            <% } %>
+            <% if(i !== 25){ %>
+                <div class="border"></div>
+            <% } %>
+        </ul>
+        <% } %>
+    </div>
+    <!--list end-->
+
+    <div class="push"></div>
+</div>
+<!--container end-->
+
+<!-- include footer-->
+<%- include("partials/footer") %>
+</body>
+</html>
