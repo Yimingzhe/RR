@@ -10,7 +10,7 @@
     <!-- import bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
           integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <link rel="icon" href="/images/favicon.ico" type="images/x-ico" />
     <link rel="stylesheet" href="/stylesheets/base.css">
     <link rel="stylesheet" href="/stylesheets/list.css">
     <!--import jQuery-->
@@ -23,6 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <script src="/javascripts/base.js"></script>
+    <script src="/javascripts/list.js"></script>
 </head>
 <body>
 
@@ -34,11 +35,11 @@
     <!--nav start-->
     <div class="nav">
         <ul>
-            <li>Viewing: </li>
+            <li id="viewing" style="display: none">Viewing: </li>
             <% for(var i=0; i<26; i++){ %>
             <% var letter = String.fromCharCode(65+i); %>
             <% var pointer = "#" + i; %>
-            <a href=<%= pointer %>><li><%= letter %></li></a>
+            <a href=<%= pointer %>><li style="display: none" id="letter<%= i %>"><%= letter %></li></a>
             <% } %>
         </ul>
     </div>
@@ -50,14 +51,18 @@
         <% var letter = String.fromCharCode(65+i) %>
         <ul>
             <li id=<%= i %>> <%= letter %></li>
-            <% for(var j=0; j<10; j++){ %>
-            <a href=""><li>Audrey Hepburn</li></a>
+
+            <% for(var j=0; j<names.length; j++){ %>
+                <% if(names[j].name.startsWith(letter)){ %>
+                <a href="/result?celebrity=<%= names[j].name %>" target="_blank"><li><%= names[j].name %></li></a>
+                <% } %>
             <% } %>
-            <% if(i !== 25){ %>
-                <div class="border"></div>
-            <% } %>
+
+            <div class="border"></div>
+
         </ul>
         <% } %>
+            <a href="#container" id="toTop">To Top</a>
     </div>
     <!--list end-->
 

@@ -10,10 +10,16 @@
 }
 .retro-search input, .retro-search select, .retro-search button{
     height: 50px;
+    border: none;
+}
+.retro-search input, .retro-search select, .retro-search select option{
+    border-right: 1px solid lightgrey;
+}
+select::-ms-expand {
+    display: none;
 }
 .retro-search button{
     background-color: #fff;
-    border: 1px solid #fff;
 }
 .retro-search>div{
     padding-top: 160px;

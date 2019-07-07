@@ -6,9 +6,6 @@
     height: 360px;
     width: 86%;
     margin: 0 auto;
-    background: url("../images/Hepburn.jpg") no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 .left-part p{
     text-align: center;
@@ -20,23 +17,30 @@
 .celebrity-intro{
     font-size: 12px;
 }
-#another{
-    display: block;
-    width: 70%;
-    height: 20px;
-    margin: 0 auto;
-    padding: 16px 0;
-    background-color: #333;
-    border-radius: 6px;
-    border: 1px solid #333;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 2px;
-    margin-bottom: 20px;
+.small-photo{
+    text-align: center;
 }
-#another:hover{
+.small-photo-btn{
+    width: 8%;
+    display: inline-block;
+}
+#small-photo-btn1,#small-photo-btn2{
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
     font-size: 16px;
+    font-weight: 700;
+}
+.small-photo .small-pic{
+    display: inline-block;
+    width: 25%;
+    height: 80px;
+    vertical-align: middle;
+}
+.small-pic:hover{
+    cursor: pointer;
 }
 /*left part end*/
 
@@ -50,11 +54,11 @@
     border: 1px solid #000;
     color: #fff;
 }
-#filter li{
+#navi li{
     display: inline-block;
     line-height: 30px;
 }
-#filter a:hover{
+#navi a:hover{
     color: #000;
 }
 
@@ -67,29 +71,18 @@
 }
 .result-list:hover{
     border: 1px solid lightgrey;
+    cursor: pointer;
 }
 .result-list .photo{
     width: 100%;
     margin: 0 auto;
     height: 200px;
-    background: url("../images/sample.jpg") no-repeat;
-    background-position: center;
-    background-size: contain;
 }
-.product-name{
+#enlarge .modal-body{
+    padding: 20px;
     text-align: center;
-    font-size: 14px;
-    font-family: Cambria;
 }
-.product-price{
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-}
-.save{
-    float: right;
-    font-size: 16px;
-    color: darkgray;
+#enlarge .modal-body img{
+    width: 70%;
 }
 /*right part end*/

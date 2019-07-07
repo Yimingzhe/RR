@@ -20,6 +20,12 @@ a:hover{
 li{
     list-style: none;
 }
+input::-ms-clear{
+    display: none;
+}
+input::-ms-reveal{
+    display: none;
+}
 /*reset css end*/
 
 /*nav start*/
@@ -39,72 +45,7 @@ li{
 .retro-top h5{
     font-size: 14px;
 }
-#reg-log li{
-    display: inline-block;
-    float: right;
-    padding: 2px;
-    margin: 0 12px;
-    color: #333;
-}
-#reg-log li:hover{
-    cursor: pointer;
-    border-bottom: 1px solid #000;
-}
-#reg-log li:hover{
-    color: #000;
-}
 /*nav end*/
-
-/*log in and register part start*/
-.login-field, .reg-field{
-    display: block;
-    height: 40px;
-    padding: 20px;
-    width: 70%;
-    margin: 20px auto;
-}
-#signIn .modal-title, #register .modal-title{
-    padding-top: 30px;
-    text-align: center;
-    font-family: Cambria;
-    font-weight: 700;
-    font-size: 24px;
-}
-.login, .reg{
-    display: block;
-    margin: 0 auto;
-    height: 40px;
-    width: 70%;
-    background-color: #000;
-    color: #fff;
-    font-weight: 700;
-    border: 1px solid #000;
-    border-radius: 6px;
-    font-size: 16px;
-}
-.login:hover, .reg:hover{
-    font-size: 18px;
-}
-#login-reg, #reg-login{
-    text-align: center;
-    margin: 20px;
-    padding: 2px;
-    text-decoration: underline;
-    text-underline-position: under;
-    color: #888;
-    line-height: 20px;
-}
-#login-reg:hover, #reg-login:hover{
-    cursor: pointer;
-    color: #000;
-}
-#register .modal-header p{
-    text-align: center;
-    padding: 10px;
-    color: #333;
-    font-family: Cambria;
-}
-/*log in and register part end*/
 
 /*container start*/
 #container{

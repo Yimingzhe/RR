@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="/stylesheets/base.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="icon" href="/images/favicon.ico" type="images/x-ico" />
     <!--import jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- import bootstrap js -->
@@ -23,6 +24,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 
     <script src="/javascripts/base.js"></script>
+
 </head>
 <body>
 
@@ -35,17 +37,8 @@
     <section class="retro-search">
         <div class="row">
             <form action="/result" method="get">
-                <span class="col-sm-3"></span>
-                <input class="col-sm-3 col-xs-12" type="text" name="celebrity" placeholder="Name of a celebrity">
-                <select name="type" class="col-sm-2 col-xs-6">
-                    <option value="All">All</option>
-                    <option value="Dress">Dresses</option>
-                    <option value="Top">Tops</option>
-                    <option value="Trousers">Trousers</option>
-                    <option value="Shoes">Shoes</option>
-                    <option value="Accessories">Accessories</option>
-                </select>
-                <button class="col-sm-1 col-xs-6" type="submit" class="btn btn-default">
+                <input class="col-sm-offset-3 col-sm-5 col-xs-offset-1 col-xs-7" type="text" name="celebrity" placeholder="Name of a celebrity">
+                <button class="col-sm-1 col-xs-3" type="submit" class="btn btn-default">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
             </form>
@@ -61,61 +54,49 @@
     <section class="retro-discover clearfix row">
         <p>Discover: Celebrities From The Past</p>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Audrey Hepburn">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Audrey Hepburn</p>
             </a>
             <p class="celebrity-intro">British Actress</p>
         </div>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Ingrid Bergman">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Ingrid Bergman</p>
             </a>
             <p class="celebrity-intro">Swedish Actress</p>
         </div>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Cary Grant">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Cary Grant</p>
             </a>
             <p class="celebrity-intro">British Actor</p>
         </div>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Marilyn Monroe">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Marilyn Monroe</p>
             </a>
             <p class="celebrity-intro">American Actress</p>
         </div>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Marlon Brando">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Marlon Brando</p>
             </a>
             <p class="celebrity-intro">American Actor</p>
         </div>
         <div class="celebrity col-md-2 col-sm-4 col-xs-12">
-            <a href="">
+            <a href="/result?celebrity=Greta Garbo">
                 <div class="img"></div>
-            </a>
-            <a href="">
                 <p class="celebrity-name">Greta Garbo</p>
             </a>
             <p class="celebrity-intro">Swedish-American Actress</p>
         </div>
         <div id="see-more">
-            <a href="/list"><p>See More Celebrities ></p></a>
+            <a href="/list" target="_blank"><p>See More Celebrities ></p></a>
         </div>
     </section>
     <!--discover part end-->

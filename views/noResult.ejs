@@ -10,8 +10,9 @@
     <!-- import bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
           integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <link rel="icon" href="/images/favicon.ico" type="images/x-ico" />
     <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/noResult.css">
     <!--import jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- import bootstrap js -->
@@ -25,37 +26,32 @@
 
 <!--container start-->
 <div id="container">
-    <!--top bar start-->
-    <nav class="retro-top">
-        <div class="title">
-            <h3>Retro Recommender</h3>
-            <h5>Dress as a celebrity from the past</h5>
+    <!--include header-->
+    <%- include("partials/header") %>
+
+    <!--search part start-->
+    <div>
+        <div id="search">
+            <form method="get" action="/result">
+                <input class="col-sm-offset-4 col-sm-3 col-xs-offset-1 col-xs-8" type="text" name="celebrity" class="form-control"
+                       placeholder="Name">
+                <button class="col-sm-1 col-xs-2" type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span></button>
+            </form>
         </div>
-        <ul id="reg-log">
-            <li><a href="">Register</a></li>
-            <li><a href="">Log in</a></li>
-        </ul>
-    </nav>
+    </div>
+    <!--search part end-->
+
+    <p id="text" class="col-xs-12">
+        <b>No result, </b>please try other names or click <a href="/list">here</a> to see the list of celebrities!
+    </p>
 
     <!--top bar end-->
     <div class="push"></div>
 </div>
 <!--container end-->
 
-<!--footer start-->
-<footer id="retro-footer">
-    <div class="hidden-xs">
-        <ul>
-            <li><a href="#">- About us</a></li>
-            <li><a href="#">- Privacy policy</a></li>
-            <li><a href="#">- Terms & Conditions</a></li>
-            <li><a href="mailto:xshi28@sheffield.ac.uk">- Contact us</a></li>
-        </ul>
-    </div>
-    <div>
-        <span>&copy; 2019 Retro Recommender</span>
-    </div>
-</footer>
-<!--footer end-->
+<!--include footer-->
+<%- include("partials/footer") %>
 </body>
 </html>

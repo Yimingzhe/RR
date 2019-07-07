@@ -10,7 +10,7 @@
     <!-- import bootstrap css-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
           integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+    <link rel="icon" href="/images/favicon.ico" type="images/x-ico" />
     <link rel="stylesheet" href="/stylesheets/base.css">
     <link rel="stylesheet" href="/stylesheets/result.css">
     <!--import jQuery-->
@@ -36,55 +36,66 @@
         <div class="left-part col-sm-4 col-xs-6">
             <div class="big-photo">
             </div>
-            <p class="celebrity-name">Audrey Hepburn</p>
-            <p class="celebrity-intro">British Actress</p>
-            <a href=""><button id="another"><span>Another</span><span class="hidden-xs"> Photo</span></button></a>
+            <p id="photoList" style="display: none"><%= celebrity.image %></p>
+            <p class="celebrity-name"><%= celebrity.name %></p>
+            <p class="celebrity-intro"><%= celebrity.job %></p>
+            <div class="small-photo">
+                <ul>
+                    <li class="small-photo-btn">
+                        <button id="small-photo-btn1"><span> < </span></button>
+                    </li>
+                    <% for(var i=0; i<3; i++){ %>
+                        <li class="small-pic">
+                            <div></div>
+                        </li>
+                    <% } %>
+                    <li class="small-photo-btn">
+                        <button id="small-photo-btn2"><span> > </span></button>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!--left part end-->
 
         <!--right part start-->
         <div class="right-part col-sm-8 col-xs-6">
             <!--right part top start-->
-            <ul id="filter" class="col-sm-6 hidden-xs">
-                <li>Filter: </li>
-                <a href=""><li> All |</li></a>
-                <a href=""><li> Dresses |</li></a>
-                <a href=""><li> Tops |</li></a>
-                <a href=""><li> Trousers |</li></a>
-                <a href=""><li> Shoes |</li></a>
-                <a href=""><li> Accessories</li></a>
+            <ul id="navi" class="col-sm-6 hidden-xs">
+                <a href="/"><li> &nbsp;&nbsp;&nbsp;Back to index</li></a>
+                <a href="/list"><li> &nbsp;&nbsp;&nbsp;See our list of celebrities</li></a>
             </ul>
             <div id="search" class="row">
                 <form method="get" action="/result">
-                    <input class="col-sm-3 col-xs-12" type="text" name="keysearch" class="form-control"
+                    <input class="col-sm-4 col-xs-7" type="text" name="celebrity" class="form-control"
                            placeholder="Name">
-                    <select name="type" class="col-sm-2 col-xs-6">
-                        <option value="All">All</option>
-                        <option value="Dress">Dresses</option>
-                        <option value="Top">Tops</option>
-                        <option value="Trousers">Trousers</option>
-                        <option value="Shoes">Shoes</option>
-                        <option value="Accessories">Accessories</option>
-                    </select>
-                    <button class="col-sm-1 col-xs-6" type="submit" class="btn btn-default">
+                    <button class="col-sm-1 col-xs-5" type="submit" class="btn btn-default">
                         <span class="glyphicon glyphicon-search"></span></button>
                 </form>
             </div>
             <!--right part top over-->
 
             <!--right part list start-->
-            <% for(var i=0; i<12; i++){ %>
-            <div class="result-list col-md-3 col-sm-4 col-xs-12">
-                <a href="">
-                    <div class="photo">
+            <% for(var i=0; i<10; i++){ %>
+                <div class="result-list col-md-3 col-sm-4 col-xs-12" style="display: none;">
+                    <div class="photo" data-toggle="modal" data-target="#enlarge">
                     </div>
-                </a>
-                <p class="product-name">CAROLINA HERRERA</p>
-                <span class="product-price">£533</span>
-                <% var name = "save" + i %>
-                <a href=""><span id="<%= name%>" class="glyphicon glyphicon-heart-empty save"></span></a>
-            </div>
+                </div>
             <% } %>
+
+            <!--click the small image to enlarge-->
+            <div id="enlarge" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="" alt="photo">
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
             <!--right part list over-->
         </div>
         <!--right part end-->
