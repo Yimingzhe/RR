@@ -1,4 +1,4 @@
-var query = require('myLibs/mysql');
+var query = require('../myLibs/mysql');
 
 // display the photos of the celebrity
 exports.search = function (req, res, next) {

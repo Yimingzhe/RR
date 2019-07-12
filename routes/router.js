@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var query = require('myLibs/mysql');
+var query = require('../myLibs/mysql');
 var result = require('../controllers/result');
 var list = require('../controllers/list');
 

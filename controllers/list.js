@@ -1,4 +1,4 @@
-var query = require('myLibs/mysql');
+var query = require('../myLibs/mysql');
 
 exports.show = function (req, res) {
     query("SELECT `name` FROM `celebrity_table`", function(err, results, fields){
