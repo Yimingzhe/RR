@@ -75,7 +75,7 @@ select::-ms-expand {
     background-size: cover;
 }
 .retro-discover .celebrity:nth-child(6) .img{
-    background: url("../images/Brando.jpeg") no-repeat;
+    background: url("../images/Brando.jpg") no-repeat;
     background-position: center;
     background-size: cover;
 }
