@@ -1,11 +1,28 @@
 var mysql = require("mysql");
-var pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '803101',
-    database: 'retro',
-    port: '3306'
-});
+
+// if(process.env.JAWSDB_URL) {
+//     var connection = mysql.createConnection(process.env.JAWSDB_URL)
+// } else{
+//     var connection = mysql.createConnection({
+//         host: 'localhost',
+//         user: 'root',
+//         password: '803101',
+//         database: 'retro',
+//         port: '3306'
+//     });
+// }
+
+if(process.env.JAWSDB_URL) {
+    var pool = mysql.createPool(process.env.JAWSDB_URL);
+} else{
+    var pool = mysql.createPool({
+        host: 'localhost',
+        user: 'root',
+        password: '803101',
+        database: 'retro',
+        port: '3306'
+    });
+}
 
 var query = function(sql, options, callback){
     pool.getConnection(function(err, conn){
