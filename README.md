@@ -8,3 +8,17 @@ If there is no search result, please change the keyword or view the list of cele
 
 ## URL
 https://retro-recommender.herokuapp.com/
+<br><br>
+## Screenshots
+网站的部分截图展示<br/><br/>
+**Index 首页**<br/><br/>
+![image](https://github.com/Yimingzhe/RR/raw/master/screenshots/index.png)
+<br/><br/>
+**List 列表页**<br/><br/>
+![image](https://github.com/Yimingzhe/RR/raw/master/screenshots/list.png)
+<br/><br/>
+**Result 搜索结果页面**<br/><br/>
+![image](https://github.com/Yimingzhe/RR/raw/master/screenshots/result.png)
+<br/><br/>
+![image](https://github.com/Yimingzhe/RR/raw/master/screenshots/result1.png)
+<br/><br/>
